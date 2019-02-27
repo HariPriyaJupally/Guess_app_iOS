@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		F0B4E01F22261FCB005F3BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4E01E22261FCB005F3BA4 /* AppDelegate.swift */; };
-		F0B4E02122261FCB005F3BA4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4E02022261FCB005F3BA4 /* FirstViewController.swift */; };
-		F0B4E02322261FCB005F3BA4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4E02222261FCB005F3BA4 /* SecondViewController.swift */; };
+		F0B4E02122261FCB005F3BA4 /* GuesserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4E02022261FCB005F3BA4 /* GuesserViewController.swift */; };
+		F0B4E02322261FCB005F3BA4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4E02222261FCB005F3BA4 /* HistoryViewController.swift */; };
 		F0B4E02622261FCB005F3BA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B4E02422261FCB005F3BA4 /* Main.storyboard */; };
 		F0B4E02822261FCC005F3BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0B4E02722261FCC005F3BA4 /* Assets.xcassets */; };
 		F0B4E02B22261FCC005F3BA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B4E02922261FCC005F3BA4 /* LaunchScreen.storyboard */; };
 		F0B4E03622261FCC005F3BA4 /* GuesserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4E03522261FCC005F3BA4 /* GuesserTests.swift */; };
 		F0B4E04122261FCC005F3BA4 /* GuesserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4E04022261FCC005F3BA4 /* GuesserUITests.swift */; };
+		F0B4E04F2226304C005F3BA4 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4E04E2226304C005F3BA4 /* StatisticsViewController.swift */; };
+		F0B4E051222631C7005F3BA4 /* Guesser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4E050222631C7005F3BA4 /* Guesser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,8 @@
 /* Begin PBXFileReference section */
 		F0B4E01B22261FCB005F3BA4 /* Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guesser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B4E01E22261FCB005F3BA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0B4E02022261FCB005F3BA4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		F0B4E02222261FCB005F3BA4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F0B4E02022261FCB005F3BA4 /* GuesserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuesserViewController.swift; sourceTree = "<group>"; };
+		F0B4E02222261FCB005F3BA4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F0B4E02522261FCB005F3BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0B4E02722261FCC005F3BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0B4E02A22261FCC005F3BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		F0B4E03C22261FCC005F3BA4 /* GuesserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuesserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B4E04022261FCC005F3BA4 /* GuesserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuesserUITests.swift; sourceTree = "<group>"; };
 		F0B4E04222261FCC005F3BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0B4E04E2226304C005F3BA4 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		F0B4E050222631C7005F3BA4 /* Guesser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guesser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				F0B4E01E22261FCB005F3BA4 /* AppDelegate.swift */,
-				F0B4E02022261FCB005F3BA4 /* FirstViewController.swift */,
-				F0B4E02222261FCB005F3BA4 /* SecondViewController.swift */,
+				F0B4E02022261FCB005F3BA4 /* GuesserViewController.swift */,
+				F0B4E02222261FCB005F3BA4 /* HistoryViewController.swift */,
 				F0B4E02422261FCB005F3BA4 /* Main.storyboard */,
 				F0B4E02722261FCC005F3BA4 /* Assets.xcassets */,
 				F0B4E02922261FCC005F3BA4 /* LaunchScreen.storyboard */,
 				F0B4E02C22261FCC005F3BA4 /* Info.plist */,
+				F0B4E04E2226304C005F3BA4 /* StatisticsViewController.swift */,
+				F0B4E050222631C7005F3BA4 /* Guesser.swift */,
 			);
 			path = Guesser;
 			sourceTree = "<group>";
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0B4E02322261FCB005F3BA4 /* SecondViewController.swift in Sources */,
+				F0B4E02322261FCB005F3BA4 /* HistoryViewController.swift in Sources */,
 				F0B4E01F22261FCB005F3BA4 /* AppDelegate.swift in Sources */,
-				F0B4E02122261FCB005F3BA4 /* FirstViewController.swift in Sources */,
+				F0B4E051222631C7005F3BA4 /* Guesser.swift in Sources */,
+				F0B4E02122261FCB005F3BA4 /* GuesserViewController.swift in Sources */,
+				F0B4E04F2226304C005F3BA4 /* StatisticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
