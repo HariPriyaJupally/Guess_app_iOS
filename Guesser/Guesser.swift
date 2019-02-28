@@ -20,6 +20,10 @@ struct Guess {
     
  }
     
+    var numAttempts:Int {
+        return _numAttempts
+    }
+    
     private init() {
         self.correctAnswer = 0
         self._numAttempts = 0
@@ -49,7 +53,6 @@ struct Guess {
         }
         else {
             guesses.append(Guess(correctAnswer: correctAnswer, numAttemptsRequired: _numAttempts))
-                createNewProblem()
             return Result.correct
         }
     }
@@ -67,6 +70,10 @@ struct Guess {
     }
     
     func minimumNumAttempts() -> Int {
+        if guesses.isEmpty {
+            return 0
+        }
+        else {
         var min = guesses[0].numAttemptsRequired
         for i in guesses {
             if min > i.numAttemptsRequired {
@@ -74,9 +81,14 @@ struct Guess {
             }
         }
         return min
+        }
     }
     
     func maximumNumAttempts() -> Int {
+        if guesses.isEmpty {
+            return 0
+        }
+        else {
         var max = guesses[0].numAttemptsRequired
         for i in guesses {
             if max < i.numAttemptsRequired {
@@ -84,6 +96,7 @@ struct Guess {
             }
         }
         return max
+        }
     }
     
 }

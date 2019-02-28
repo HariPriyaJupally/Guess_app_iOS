@@ -18,13 +18,17 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         return 1
     }
     
+    @IBOutlet weak var historyTV: UITableView!
+    override func viewWillAppear(_ animated: Bool) {
+        historyTV.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "city")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "history")!
         cell.textLabel?.text = "Correct Answer: " + String(Guesser.shared.guess(index: indexPath.row).correctAnswer)
         cell.detailTextLabel?.text = "# Attempts: " + String(Guesser.shared.guess(index: indexPath.row).numAttemptsRequired)
         return cell
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

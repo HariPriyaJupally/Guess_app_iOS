@@ -15,13 +15,17 @@ class GuesserViewController: UIViewController {
     
     @IBOutlet weak var gusserLBL: UILabel!
     @IBAction func amIRightBTN(_ sender: Any) {
-        let result = Guesser.shared.amIRight(guess: Int(guessNumberTF.text ?? "0")!)
-        if result == Result.correct {
-            gusserLBL.text = result.rawValue
-            displayMessage()
-        }
-        else {
-         gusserLBL.text = result.rawValue
+        if let value = Int(guessNumberTF.text!) {
+            let result = Guesser.shared.amIRight(guess: Int(value))
+            if result == Result.correct{
+                gusserLBL.text = result.rawValue
+                displayMessage()
+                Guesser.shared.createNewProblem()
+            }else{
+                gusserLBL.text = result.rawValue
+            }
+        }else{
+            invalidInput()
         }
     }
     
@@ -40,12 +44,21 @@ class GuesserViewController: UIViewController {
 
     func displayMessage(){
         let alert = UIAlertController(title: "Well done",
-                                      message: "You got it in \(Guesser.shared.numGuesses()) tries",
+                                      message: "You got it in \(Guesser.shared.numAttempts) tries",
             preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default,
                                       handler: nil))
         self.present(alert, animated: true, completion: nil)
         
+    }
+    
+    func invalidInput(){
+        let alert = UIAlertController(title: "Invalid Input",
+                                      message: "You have entered an invalid input. Please enter a value from range 1-10",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default,
+                                      handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
